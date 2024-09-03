@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".luasvolume">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="640dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:gravity="center"
+        android:id="@+id/navbar"
+        >
+
+        <TextView
+            android:id="@+id/nav1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Latihan 5"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_below="@+id/nav1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Pemrograman Mobile"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="90dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panjang"
+            android:textColor="@color/black"
+            android:id="@+id/text"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:layout_below="@+id/text"
+            android:hint="inputkan angka"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/panjang"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lebar"
+            android:textColor="@color/black"
+            android:id="@+id/text2"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/panjang"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:layout_below="@+id/text2"
+            android:hint="inputkan angka"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lebar"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tinggi"
+            android:textColor="@color/black"
+            android:id="@+id/text3"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/lebar"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:layout_below="@+id/text3"
+            android:hint="inputkan angka"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tinggi"
+            android:inputType="number"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tinggi"
+            android:layout_marginTop="10dp"
+            android:text="Luas"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:textColor="@color/white"
+            android:id="@+id/luas"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tinggi"
+            android:layout_marginTop="10dp"
+            android:text="Volume"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:textColor="@color/white"
+            android:id="@+id/volume"
+            android:layout_toRightOf="@+id/luas"
+            android:layout_marginStart="15dp"
+            />
+
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/luas"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="Hasilnya"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="640dp"
+        android:gravity="center"
+        android:id="@+id/credit">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="- rayshayunda -"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

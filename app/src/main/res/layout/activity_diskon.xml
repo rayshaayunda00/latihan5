@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diskon">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="640dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:gravity="center"
+        android:id="@+id/navbar"
+        >
+
+        <TextView
+            android:id="@+id/nav1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Latihan 5"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_below="@+id/nav1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Pemrograman Mobile"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="55dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Belanja"
+            android:textColor="@color/black"
+            android:id="@+id/text"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:layout_below="@+id/text"
+            android:hint="inputkan total belanja"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/input"
+            android:inputType="number"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary"
+
+            android:textColor="@color/white"
+            android:id="@+id/klik"
+            />
+
+
+        <TextView
+            android:id="@+id/diskonnn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:text="Diskon"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/klik"
+            android:layout_marginStart="12dp"
+            />
+
+        <TextView
+            android:id="@+id/txttotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingStart="38dp"
+            android:paddingEnd="38dp"
+            android:text="Total Setelah Diskon"
+            android:textAllCaps="false"
+            android:background="@color/design_default_color_secondary_variant"
+
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Setelah Diskon"
+            android:textColor="@color/black"
+            android:id="@+id/text2"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/klik"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="640dp"
+        android:gravity="center"
+        android:id="@+id/credit">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="- rayshayunda -"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
