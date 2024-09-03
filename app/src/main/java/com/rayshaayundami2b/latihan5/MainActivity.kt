@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnluasvolume = findViewById<Button>(R.id.btnluasvolume)
         val btnganjilgenap = findViewById<Button>(R.id.btnganjilgenap)
         val btnpissingdata = findViewById<Button>(R.id.btnpassingdata)
+        val btnlistview = findViewById<Button>(R.id.btnlist)
 
 
 
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity() {
         }
         btnpissingdata.setOnClickListener {
             startActivity(Intent(this, pissingdata::class.java))
+        }
+        btnlistview.setOnClickListener {
+            startActivity(Intent(this, listview::class.java))
         }
 
 
