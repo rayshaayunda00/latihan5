@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="640dp"
+        android:layout_marginBottom="670dp"
         android:background="@color/design_default_color_secondary_variant"
         android:gravity="center"
         android:id="@+id/navbar"
@@ -43,7 +43,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="80dp"
+        android:layout_margin="30dp"
         android:gravity="center"
         >
 
@@ -67,7 +67,7 @@
             android:textColor="@color/white"
             android:id="@+id/btndiskon"
             android:layout_below="@+id/btnkonversisuhu"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:layout_width="match_parent"
@@ -79,7 +79,7 @@
             android:textColor="@color/white"
             android:id="@+id/btnluasvolume"
             android:layout_below="@+id/btndiskon"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:layout_width="match_parent"
@@ -91,7 +91,7 @@
             android:textColor="@color/white"
             android:id="@+id/btnganjilgenap"
             android:layout_below="@+id/btnluasvolume"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
 
             />
 
@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnganjilgenap"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:background="@color/design_default_color_secondary_variant"
             android:backgroundTint="@color/white"
             android:text="passing data"
@@ -113,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnpassingdata"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:background="@color/design_default_color_secondary_variant"
             android:backgroundTint="@color/white"
             android:text="list view"
@@ -121,6 +121,46 @@
             android:textColor="@color/white"
 
             />
+        <Button
+            android:id="@+id/btnRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnlist"
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/white"
+            android:text="RecyclerView"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            />
+        <Button
+            android:id="@+id/btnRv_Buah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRecyclerView"
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/white"
+            android:text="RecyclerBuah"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            />
+        <Button
+            android:id="@+id/btnMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRv_Buah"
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_secondary_variant"
+            android:backgroundTint="@color/white"
+            android:text="Movie List"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            />
+
 
     </RelativeLayout>
 

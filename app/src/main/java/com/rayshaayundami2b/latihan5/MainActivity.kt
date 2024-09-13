@@ -23,10 +23,9 @@ class MainActivity : AppCompatActivity() {
         val btnganjilgenap = findViewById<Button>(R.id.btnganjilgenap)
         val btnpissingdata = findViewById<Button>(R.id.btnpassingdata)
         val btnlistview = findViewById<Button>(R.id.btnlist)
-
-
-
-
+        val rv_buku = findViewById<Button>(R.id.btnRecyclerView)
+        val btnRvBuah = findViewById<Button>(R.id.btnRv_Buah)
+        var btnMovie = findViewById<Button>(R.id.btnMovie)
 
 
         btnkonversisuhu.setOnClickListener {
@@ -50,7 +49,26 @@ class MainActivity : AppCompatActivity() {
         btnlistview.setOnClickListener {
             startActivity(Intent(this, listview::class.java))
         }
+        rv_buku.setOnClickListener {
+            startActivity(Intent(this, RecyclerView::class.java))
+        }
+        btnRvBuah.setOnClickListener() {
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, CustomeImageRecycleView::class.java)
+            startActivity(intenMenu2)
+        }
+        btnMovie.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, RecycleViewCardMovie::class.java)
+            startActivity(intenMenu2)
+        }
 
 
     }
-}
+    }
