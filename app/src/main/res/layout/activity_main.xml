@@ -109,7 +109,7 @@
 
             />
         <Button
-            android:id="@+id/btnlist"
+            android:id="@+id/btnListview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnpassingdata"
@@ -125,7 +125,7 @@
             android:id="@+id/btnRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnlist"
+            android:layout_below="@+id/btnListview"
             android:layout_marginTop="5dp"
             android:background="@color/design_default_color_secondary_variant"
             android:backgroundTint="@color/white"

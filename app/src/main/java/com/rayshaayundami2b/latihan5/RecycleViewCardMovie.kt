@@ -1,5 +1,6 @@
 package com.rayshaayundami2b.latihan5
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rayshaayundami2b.latihan5.adapter.MovieAdapter
 import com.rayshaayundami2b.latihan5.model.ModelMovie
+import java.util.ArrayList
 
 class RecycleViewCardMovie : AppCompatActivity() {
 
@@ -23,12 +25,14 @@ class RecycleViewCardMovie : AppCompatActivity() {
 
         movieList = ArrayList()
         recyclerView = findViewById(R.id.rvMovieList) as RecyclerView
-        movieAdapter = MovieAdapter(this, movieList)
-        val layoutManager : RecyclerView.LayoutManager = GridLayoutManager(this, 2)
+        movieAdapter = MovieAdapter(this,movieList){ position ->
+            showDetailDialog(position as Int)
+        }
+        val layoutManager : RecyclerView.LayoutManager = GridLayoutManager(this,2)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = movieAdapter
 
-        prepareMovieList()
+        prepareMovielist()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -36,10 +40,12 @@ class RecycleViewCardMovie : AppCompatActivity() {
             insets
         }
     }
-    private fun prepareMovieList() {
+
+
+
+    private fun prepareMovielist() {
         var movie = ModelMovie("Avatar", R.drawable.avatar)
         movieList.add(movie)
-
         movie = ModelMovie("Batman", R.drawable.batman)
         movieList.add(movie)
         movie = ModelMovie("End Game", R.drawable.end_game)
@@ -60,7 +66,12 @@ class RecycleViewCardMovie : AppCompatActivity() {
         movieList.add(movie)
 
         movieAdapter!!.notifyDataSetChanged()
-
-
     }
+
+    private fun showDetailDialog(position: Int) {
+        val intent = Intent(this,DetailMovieActivity::class.java)
+        intent.putExtra("imageResId",movieList[position].image)
+        startActivity(intent)
+    }
+
 }

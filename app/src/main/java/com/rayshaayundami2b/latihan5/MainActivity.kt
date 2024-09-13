@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.widget.ListView
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnluasvolume = findViewById<Button>(R.id.btnluasvolume)
         val btnganjilgenap = findViewById<Button>(R.id.btnganjilgenap)
         val btnpissingdata = findViewById<Button>(R.id.btnpassingdata)
-        val btnlistview = findViewById<Button>(R.id.btnlist)
+        val btnListView = findViewById<Button>(R.id.btnListview)
         val rv_buku = findViewById<Button>(R.id.btnRecyclerView)
         val btnRvBuah = findViewById<Button>(R.id.btnRv_Buah)
         var btnMovie = findViewById<Button>(R.id.btnMovie)
@@ -46,8 +48,8 @@ class MainActivity : AppCompatActivity() {
         btnpissingdata.setOnClickListener {
             startActivity(Intent(this, pissingdata::class.java))
         }
-        btnlistview.setOnClickListener {
-            startActivity(Intent(this, listview::class.java))
+        btnListView.setOnClickListener {
+            startActivity(Intent(this, ListViewActivity::class.java))
         }
         rv_buku.setOnClickListener {
             startActivity(Intent(this, RecyclerView::class.java))

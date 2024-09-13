@@ -2,7 +2,6 @@ package com.rayshaayundami2b.latihan5.adapter
 
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,13 +12,15 @@ import com.rayshaayundami2b.latihan5.R
 import com.rayshaayundami2b.latihan5.RecycleViewCardMovie
 import com.rayshaayundami2b.latihan5.model.ModelMovie
 
-class MovieAdapter constructor(
-
-    private val getActivity: RecycleViewCardMovie,//untuk bisa d klik
-    private val movieList: List<ModelMovie>
-):
+class MovieAdapter(
+    private val getActivity: RecycleViewCardMovie,
+    private val movieList: List<ModelMovie>,
+    private val onItemClick: (Int) -> Unit
+) :
     RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    class MyViewHolder(itemView: android.view.View) : RecyclerView.ViewHolder(itemView) {
+        //deklarasi widget dari item layout
         val txtMovie: TextView = itemView.findViewById(R.id.txtMovie)
         val imgMovie: ImageView = itemView.findViewById(R.id.imgMovie)
         val cardView: CardView = itemView.findViewById(R.id.cardView)
@@ -41,12 +42,14 @@ class MovieAdapter constructor(
 
         //ini ketika item di klik
         holder.cardView.setOnClickListener() {
+            onItemClick(position)
             Toast.makeText(
                 getActivity, movieList[position].title,
                 Toast.LENGTH_SHORT
             ).show()
         }
     }
+
 }
 
 

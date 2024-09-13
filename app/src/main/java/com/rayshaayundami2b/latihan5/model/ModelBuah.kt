@@ -1,42 +1,46 @@
 package com.rayshaayundami2b.latihan5.model
 
+import android.hardware.biometrics.BiometricManager.Strings
 import com.rayshaayundami2b.latihan5.R
 
-data class ModelBuah(
-    val image: Int, val deskripsi : String
+
+class ModelBuah (
+    val image : Int, val nama : String
 )
 
 //kita bikin array data
-object MockList{
-    fun getModel() : List<ModelBuah>{
+
+object Mocklist{
+
+    fun getModel() : List<ModelBuah> {
         val itemModel1 = ModelBuah(
             R.drawable.apple,
-            "Apple",
+            nama = "Apple"
         )
         val itemModel2 = ModelBuah(
             R.drawable.grapes,
-            "Anggur",
+            nama = "Anggur"
         )
         val itemModel3 = ModelBuah(
             R.drawable.orange,
-            "Jeruk",
+            nama = "Jeruk"
         )
         val itemModel4 = ModelBuah(
             R.drawable.pear,
-            "Pear",
+            nama = "Pear"
         )
         val itemModel5 = ModelBuah(
             R.drawable.strawberry,
-            "Strowbery",
+            nama = "Strawberry"
         )
 
-        val itemList: ArrayList<ModelBuah> = ArrayList()
+        val itemList : ArrayList<ModelBuah> = ArrayList()
         itemList.add(itemModel1)
         itemList.add(itemModel2)
         itemList.add(itemModel3)
         itemList.add(itemModel4)
         itemList.add(itemModel5)
 
-        return  itemList
+        return itemList
     }
 }

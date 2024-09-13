@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listview">
-
+    tools:context=".ListViewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,10 +13,8 @@
         android:orientation="horizontal">
 
         <ListView
-            android:id="@+id/btnlistview"
+            android:id="@+id/btnListview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
