@@ -44,33 +44,34 @@ class RecycleViewCardMovie : AppCompatActivity() {
 
 
     private fun prepareMovielist() {
-        var movie = ModelMovie("Avatar", R.drawable.avatar)
+        var movie = ModelMovie("Avatar", R.drawable.avatar, "27 November 2023", getString(R.string.sinopsis1))
         movieList.add(movie)
-        movie = ModelMovie("Batman", R.drawable.batman)
+        movie = ModelMovie("Batman",  R.drawable.batman,"26 November 2024",getString(R.string.sinopsis1))
         movieList.add(movie)
-        movie = ModelMovie("End Game", R.drawable.end_game)
+        movie = ModelMovie("End Game", R.drawable.end_game, "20 Desember 2024",getString(R.string.sinopsis2))
         movieList.add(movie)
-        movie = ModelMovie("Hulk", R.drawable.hulk)
+        movie = ModelMovie("Hulk", R.drawable.hulk, "12 April 2024",getString(R.string.sinopsis3))
         movieList.add(movie)
-        movie = ModelMovie("Inception", R.drawable.inception)
+        movie = ModelMovie("Inception", R.drawable.inception, "20 Maret 2024",getString(R.string.sinopsis1))
         movieList.add(movie)
-        movie = ModelMovie("Jumanji", R.drawable.jumanji)
+        movie = ModelMovie("Jumanji", R.drawable.jumanji, "17 Agustus 2024",getString(R.string.sinopsis2))
         movieList.add(movie)
-        movie = ModelMovie("Lucy", R.drawable.lucy)
+        movie = ModelMovie("Lucy", R.drawable.lucy, "04 November 2024",getString(R.string.sinopsis3))
         movieList.add(movie)
-        movie = ModelMovie("Jurassic World", R.drawable.jurassic_world)
+        movie = ModelMovie("Jurassic World", R.drawable.jurassic_world, "10 Oktober 2024",getString(R.string.sinopsis2))
         movieList.add(movie)
-        movie = ModelMovie("Spider Man", R.drawable.spider_man)
+        movie = ModelMovie("Spider Man", R.drawable.spider_man,"11 November 2024",getString(R.string.sinopsis3))
         movieList.add(movie)
-        movie = ModelMovie("Venom", R.drawable.venom)
+        movie = ModelMovie("Venom", R.drawable.venom,"19 November 2024",getString(R.string.sinopsis1))
         movieList.add(movie)
 
         movieAdapter!!.notifyDataSetChanged()
     }
 
     private fun showDetailDialog(position: Int) {
-        val intent = Intent(this,DetailMovieActivity::class.java)
+        val intent = Intent(this,DetailHeroActivity::class.java)
         intent.putExtra("imageResId",movieList[position].image)
+        intent.putExtra("txtjudul", movieList[position].title)
         startActivity(intent)
     }
 

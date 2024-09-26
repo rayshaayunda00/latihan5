@@ -1,6 +1,6 @@
 package com.rayshaayundami2b.latihan5.adapter
 
-
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.rayshaayundami2b.latihan5.DetailHeroActivity
 import com.rayshaayundami2b.latihan5.R
 import com.rayshaayundami2b.latihan5.RecycleViewCardMovie
 import com.rayshaayundami2b.latihan5.model.ModelMovie
@@ -40,16 +41,23 @@ class MovieAdapter(
         holder.txtMovie.text = movieList[position].title
         holder.imgMovie.setImageResource(movieList[position].image)
 
-        //ini ketika item di klik
-        holder.cardView.setOnClickListener() {
-            onItemClick(position)
-            Toast.makeText(
-                getActivity, movieList[position].title,
-                Toast.LENGTH_SHORT
-            ).show()
+        // Menambahkan event klik
+        holder.itemView.setOnClickListener {
+            val intent = Intent(
+                getActivity,
+                DetailHeroActivity::class.java)
+
+            intent.putExtra(
+                "imageResId",
+                movieList[position].image
+            ) // Mengirim imageResId ke Activity PhotoDetail
+            intent.putExtra("title", movieList[position].title)
+            intent.putExtra("tanggal", movieList[position].tanggal)
+            intent.putExtra("sinopsis", movieList[position].sinopsis)
+
+            getActivity.startActivity(intent)
         }
     }
-
 }
 
 

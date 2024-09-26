@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rayshaayundami2b.latihan5.R
 import com.rayshaayundami2b.latihan5.model.ModelBuah
 
-class BuahAdapter(val itemList: ArrayList<ModelBuah>,private val onItemClick : (ModelBuah) -> Unit) :
+class BuahAdapter(
+    val itemList: ArrayList<ModelBuah>,
+    private val onItemClick : (ModelBuah) -> Unit) :
     RecyclerView.Adapter<BuahAdapter.ModelViewHolder>() {
     class ModelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //deklarasi widget dari item layout
